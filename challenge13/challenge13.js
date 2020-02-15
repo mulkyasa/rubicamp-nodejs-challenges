@@ -29,8 +29,10 @@ switch (args[2]) {
         console.log(`"${output}", telah ditambahkan.`);
         break;
     case `list`:
-        console.log('Daftar pekerjaan :');
-        
+        console.log('Daftar pekerjaan');
+        data.forEach((item, index) => {
+            console.log(`${index + 1}. [ ] ${item.task}`)
+        });
         break;
     default:
 

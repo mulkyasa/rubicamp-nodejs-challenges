@@ -1,6 +1,12 @@
 [
    {
-      "task": "",
+      "task": "aku mau pergi ke pasar",
+      "complete": false,
+      "tag": "",
+      "tagname": ""
+   },
+   {
+      "task": "saya mau tidur",
       "complete": false,
       "tag": "",
       "tagname": ""
