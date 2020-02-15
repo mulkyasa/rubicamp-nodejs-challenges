@@ -1,6 +1,6 @@
 const fs = require('fs');
-let rawdata = fs.readFileSync('data12.json');
-let obj = JSON.parse(rawdata);
+let rawData = fs.readFileSync('data12.json');
+let obj = JSON.parse(rawData);
 let num = 0;
 let wrong = 0;
 
