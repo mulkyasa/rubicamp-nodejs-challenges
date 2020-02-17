@@ -3,6 +3,7 @@ const readData = () => JSON.parse(fs.readFileSync('data13.json'));
 const writeData = (data) => fs.writeFileSync('data13.json', JSON.stringify(data, null, 3));
 const args = process.argv;
 let data = readData();
+let num = parseInt(args[3] - 1);
 
 console.log(
     `
@@ -31,9 +32,28 @@ switch (args[2]) {
     case `list`:
         console.log('Daftar pekerjaan');
         data.forEach((item, index) => {
-            console.log(`${index + 1}. [ ] ${item.task}`)
+            console.log(`${index + 1}. ${item.complete ? '[x]' : '[ ]'} ${item.task}`)
         });
         break;
+    case `delete`:
+        console.log(`'${data[num].task}' telah dihapus dari daftar`);
+        data.splice(num, 1);
+        writeData(data);
+        break;
+    case `complete`:
+        const completeTask = num;
+        data[completeTask].complete = true;
+        data[completeTask].tags = 'x';
+        console.log(`'${data[completeTask].task}' telah selesai.`);
+        writeData(data);
+        break;
+        case `uncomplete`:
+            const uncompleteTask = num;
+            data[uncompleteTask].complete = false;
+            data[uncompleteTask].tags = ' ';
+            console.log(`'${data[uncompleteTask].task}' status selesai dibatalkan.`);
+            writeData(data);
+            break;
     default:
 
         break;
