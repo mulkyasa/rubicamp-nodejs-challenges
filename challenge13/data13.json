@@ -1,13 +1,15 @@
 [
    {
-      "task": "saya akan memasak",
-      "complete": false,
-      "tag": "",
-      "tagname": "",
-      "tags": " "
+      "task": "saya akan memasak.",
+      "complete": true,
+      "tag": [
+         "masak",
+         "sayur"
+      ],
+      "tagname": ""
    },
    {
-      "task": "saya akan pergi ke pasar",
+      "task": "saya pergi ke sekolah",
       "complete": false,
       "tag": "",
       "tagname": ""
